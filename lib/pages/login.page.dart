@@ -27,32 +27,38 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Image(image: AssetImage("images/enset-logo.png"), width: 151),
                   SizedBox(height: 10),
-                  TextFormField(
-                    controller: usernameController,
-                    decoration: InputDecoration(
-                      hintText: "Username",
-                      suffixIcon: Icon(Icons.lock),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          width: 1,
-                          color: Theme.of(context).primaryColor,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: usernameController,
+                      decoration: InputDecoration(
+                        hintText: "Username",
+                        suffixIcon: Icon(Icons.lock),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Theme.of(context).primaryColor,
+                          ),
                         ),
                       ),
                     ),
                   ),
                   SizedBox(height: 20),
-                  TextFormField(
-                    controller: passwordController,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: "Password",
-                      suffixIcon: Icon(Icons.visibility),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          width: 1,
-                          color: Theme.of(context).primaryColor,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      controller: passwordController,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: "Password",
+                        suffixIcon: Icon(Icons.visibility),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Theme.of(context).primaryColor,
+                          ),
                         ),
                       ),
                     ),
@@ -64,8 +70,8 @@ class LoginPage extends StatelessWidget {
                       onPressed: () {
                         String username = usernameController.text;
                         String password = passwordController.text;
-                        if (username == "admin" && password == "admin") {
-                          Navigator.pop(context);
+                        if (username == "admin" && password == "1234") {
+                          //Navigator.pop(context);
                           Navigator.pushNamed(context, "/bot");
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
