@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Image(image: AssetImage("images/enset-logo.png"), width: 151),
+                  Image(image: AssetImage("images/logo-bot.jpg"), width: 151),
                   SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.all(8.0),

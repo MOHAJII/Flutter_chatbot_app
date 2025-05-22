@@ -38,7 +38,32 @@ class _ChatBotPageState extends State<ChatBotPage> {
             child: ListView.builder(
               itemCount: messages.length,
               itemBuilder: (context, index) {
-                return ListTile(title: Text("${messages[index]['content']}"));
+                return Column(
+                  children: [
+                    Row(
+                      children: [
+                        messages[index]['type'] == "user"
+                            ? SizedBox(width: 80)
+                            : SizedBox(width: 0),
+                        Expanded(
+                          child: Card.outlined(
+                            margin: EdgeInsets.all(6),
+                            color:
+                                messages[index]['type'] == "user"
+                                    ? Theme.of(context).primaryColor
+                                    : Colors.white12,
+                            child: ListTile(
+                              title: Text("${messages[index]['content']}"),
+                            ),
+                          ),
+                        ),
+                        messages[index]['type'] == "user"
+                            ? SizedBox(width: 0)
+                            : SizedBox(width: 80),
+                      ],
+                    ),
+                  ],
+                );
               },
             ),
           ),
@@ -62,17 +87,17 @@ class _ChatBotPageState extends State<ChatBotPage> {
                   ),
                 ),
                 IconButton(
-                    onPressed: () {
-                      String question = userController.text;
-                      userController.clear();
-                      String response = "Respond to $question";
-                      setState(() {
-                        messages.add({"type": "user", "content": question});
-                        messages.add({"type": "bot", "content": response});
-
-                      });
-                    },
-                    icon: Icon(Icons.send)),
+                  onPressed: () {
+                    String question = userController.text;
+                    userController.clear();
+                    String response = "Respond to $question";
+                    setState(() {
+                      messages.add({"type": "user", "content": question});
+                      messages.add({"type": "bot", "content": response});
+                    });
+                  },
+                  icon: Icon(Icons.send),
+                ),
               ],
             ),
           ),
