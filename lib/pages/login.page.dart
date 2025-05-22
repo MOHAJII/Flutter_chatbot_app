@@ -66,32 +66,35 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 20),
                   SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        String username = usernameController.text;
-                        String password = passwordController.text;
-                        if (username == "admin" && password == "1234") {
-                          //Navigator.pop(context);
-                          Navigator.pushNamed(context, "/bot");
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text("Invalid username or password"),
-                              backgroundColor: Colors.red,
-                            ),
-                          );
-                        }
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Theme.of(context).primaryColor,
-                        padding: EdgeInsets.symmetric(vertical: 15),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          String username = usernameController.text;
+                          String password = passwordController.text;
+                          if (username == "admin" && password == "1234") {
+                            //Navigator.pop(context);
+                            Navigator.pushNamed(context, "/bot");
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("Invalid username or password"),
+                                backgroundColor: Colors.red,
+                              ),
+                            );
+                          }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Theme.of(context).primaryColor,
+                          padding: EdgeInsets.symmetric(vertical: 15),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
-                      ),
-                      child: Text(
-                        "Login",
-                        style: TextStyle(color: Colors.white, fontSize: 22),
+                        child: Text(
+                          "Login",
+                          style: TextStyle(color: Colors.white, fontSize: 22),
+                        ),
                       ),
                     ),
                   ),

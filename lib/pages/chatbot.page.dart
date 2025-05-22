@@ -31,6 +31,12 @@ class _ChatBotPageState extends State<ChatBotPage> {
         ),
         backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
+        actions: [
+          IconButton(onPressed: () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, '/');
+          }, icon: Icon(Icons.logout, color: Colors.white,))
+        ],
       ),
       body: Column(
         children: [
@@ -106,3 +112,5 @@ class _ChatBotPageState extends State<ChatBotPage> {
     );
   }
 }
+
+
