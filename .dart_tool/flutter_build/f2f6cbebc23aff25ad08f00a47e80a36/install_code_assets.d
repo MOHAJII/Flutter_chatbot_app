@@ -1,0 +1,1 @@
+ /home/mohammed/Documents/Documents/ENSET_2023-2026_interne/S4/DevMobile/FlutterApps/chat_app/.dart_tool/flutter_build/f2f6cbebc23aff25ad08f00a47e80a36/native_assets.json: 
