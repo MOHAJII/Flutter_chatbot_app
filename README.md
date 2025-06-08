@@ -1,27 +1,29 @@
-# Mobile Chat Bot
+# 📱 Flutter Chat Bot
 
-## Overview
-Mobile Chat Bot is a Flutter-based mobile application that integrates a Hugging Face model to provide an interactive chatbot experience. The app features user authentication, a discussion interface for messaging, error handling, conversation history tracking, and options to clear the dialog or log out.
+A simple mobile chatbot application built using **Flutter** and **Hugging Face models**. This project demonstrates chatbot interaction with conversation history, error handling, and basic authentication.
 
-## Features
-- **Authentication Page**: A static login page for user authentication (screenshot: `chat-bot3.jpg`).
-- **Discussion Interface**: A messaging page to interact with the chatbot, displaying user and bot messages (screenshot: `chat-bot2.jpg`).
-- **Conversation History**: The Hugging Face model leverages conversation history to provide context-aware responses for each user query.
-- **Clear Dialog**: A button to clear the chat history (screenshot: `chat-bot1.jpg`).
-- **Logout**: A button to log out of the application.
-- **Error Handling**: Mechanisms to manage and display errors during user interactions.
+## 🧰 Technologies Used
 
-## Screenshots
-- **Authentication Page**: `chat-bot3.jpg`
-- **Discussion Interface**: `chat-bot2.jpg`
-- **Clear Dialog**: `chat-bot1.jpg`
+- **Flutter** – for building the mobile UI  
+- **Hugging Face Transformers** – for the chatbot model
 
-## Technologies Used
-- **Flutter**: Framework for building the cross-platform mobile application.
-- **Hugging Face Model**: Provides the AI-powered chatbot functionality.
-- **Dart**: Programming language used with Flutter.
+## 📸 Screenshots
 
-## Setup and Installation
-1. **Clone the Repository**:
+| Authentication | Chat Interface | Cleared Dialog |
+|----------------|----------------|----------------|
+| ![Authentication](./chat-bot3.jpg) | ![Chat](./chat-bot2.jpg) | ![Clear Dialog](./chat-bot1.jpg) |
+
+## 🔐 Features
+
+- **Static Login Page** – a test authentication page to access the chatbot
+- **Chat Interface** – displays user and bot messages with error handling
+- **Conversation History** – the model remembers the previous messages for context-aware responses
+- **Clear Chat Button** – deletes the current dialogue
+- **Logout Button** – exits the current session
+
+## 🚀 Getting Started
+
+1. Clone the repository  
    ```bash
-   git clone https://github.com/MOHAJII/Flutter_chatbot_app
+   git clone https://github.com/MOHAJII/Flutter_chatbot_app.git
+   cd Flutter_chatbot_app
